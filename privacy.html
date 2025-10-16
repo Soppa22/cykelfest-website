@@ -32,21 +32,62 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
-    header img {
-      height: 40px;
+    /* Brand (logo + text together) */
+    .brand {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: rgb(22, 20, 20);
     }
 
+    .brand img {
+      height: 70px;
+      width: auto;
+      margin-right: 0.8rem;
+      transition: transform 0.2s;
+
+    }
+
+    .brand span {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .brand:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Navigation links */
     nav a {
       color: var(--text-color);
       text-decoration: none;
       font-weight: 500;
       margin-left: 1.5rem;
+      font-size: 1.1rem;
       transition: opacity 0.2s;
     }
 
     nav a:hover {
       opacity: 0.7;
     }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .brand img {
+        height: 60px;
+      }
+
+      .brand span {
+        font-size: 1.5rem;
+      }
+    }
+
 
     main {
       flex: 1;
@@ -84,12 +125,16 @@
 
   <!-- HEADER -->
   <header>
-    <a href="index.html"><img src="TempLogga.png" alt="Cykelfesten logotyp"></a>
+    <a href="index.html" class="brand">
+      <img src="TempLogga.png" alt="Cykelfesten logotyp">
+      <span>Cykelfesten</span>
+    </a>
     <nav>
       <a href="support.html">Support</a>
       <a href="privacy.html">Integritetspolicy</a>
     </nav>
   </header>
+
 
   <!-- MAIN CONTENT -->
   <main>
