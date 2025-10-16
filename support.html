@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="se">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Cykelfesten</title>
+    <style>
+        :root {
+            --moss-green: rgb(117, 126, 119);
+            --text-color: #f5f5f5;
+            --nav-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--moss-green);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: var(--nav-bg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header img {
+            height: 40px;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 1.5rem;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        main {
+            flex: 1;
+            max-width: 800px;
+            margin: auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html"><img src="TempLogga.png" alt="Cykelfesten logo"></a>
+        <nav>
+            <a href="support.html">Support</a>
+            <a href="privacy.html">Integritetspolicy</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Support</h1>
+        <p>För support eller frågor, kontakta oss på <a href="mailto:support@myapp.com"
+                style="color:#f5f5f5;text-decoration:underline;">support@myapp.com</a>.</p>
+    </main>
+
+    <footer>
+        &copy; 2025 Cykelfesten.
+    </footer>
+
+</body>
+
+</html>

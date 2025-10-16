@@ -1,17 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy</title>
+  <title>Integritetspolicy - Cykelfesten</title>
   <style>
+    :root {
+      --moss-green: rgb(117, 126, 119);
+      --text-color: #f5f5f5;
+      --nav-bg: rgba(255, 255, 255, 0.05);
+    }
+
     body {
+      margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: rgb(117, 126, 119);
-      color: #f5f5f5;
-      padding: 2rem;
+      background-color: var(--moss-green);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: var(--nav-bg);
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 1.5rem;
+      transition: opacity 0.2s;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    main {
+      flex: 1;
       max-width: 800px;
       margin: auto;
+      padding: 2rem;
+      text-align: left;
     }
 
     h1 {
@@ -19,16 +61,57 @@
       font-size: 2.5rem;
     }
 
+    p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
     a {
       color: #f5f5f5;
       text-decoration: underline;
     }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      padding: 1rem;
+    }
   </style>
 </head>
+
 <body>
-  <h1>Privacy Policy</h1>
-  <p>We value your privacy. This app only collects information necessary for the app to function and does not sell or share your personal data.</p>
-  <p>For support or questions, contact us at <a href="mailto:support@myapp.com">support@myapp.com</a>.</p>
-  <p><a href="index.html">Back to Home</a></p>
+
+  <!-- HEADER -->
+  <header>
+    <a href="index.html"><img src="TempLogga.png" alt="Cykelfesten logotyp"></a>
+    <nav>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Integritetspolicy</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <h1>Integritetspolicy</h1>
+
+    <p>Din integritet är viktig för oss. Den här appen samlar endast in information som är nödvändig för att appen ska
+      fungera korrekt och upplevelsen ska bli så bra som möjligt.</p>
+
+    <p>Vi säljer eller delar inte din personliga information med tredje part. All eventuell data som samlas in används
+      endast för appens funktioner, till exempel felrapportering eller förbättring av användarupplevelsen.</p>
+
+    <p>Om du har frågor om hur vi hanterar data, eller vill begära borttagning av information, är du alltid välkommen
+      att kontakta oss.</p>
+
+    <p>Kontakt: <a href="mailto:support@myapp.com">support@myapp.com</a></p>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Cykelfesten. Alla rättigheter förbehållna.
+  </footer>
+
 </body>
+
 </html>

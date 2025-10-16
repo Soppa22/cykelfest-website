@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="se">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My App</title>
+  <title>Cykelfesten</title>
   <style>
     :root {
       --moss-green: rgb(117, 126, 119);
       --text-color: #f5f5f5;
-      --button-color: #e0e0e0;
-      --button-text: #333;
+      --nav-bg: rgba(255, 255, 255, 0.05);
     }
 
     body {
@@ -17,12 +17,46 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--moss-green);
       color: var(--text-color);
+      min-height: 100vh;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER / NAVIGATION */
+    header {
+      background-color: var(--nav-bg);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    header img {
+      height: 40px;
+      cursor: pointer;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 1.5rem;
+      transition: opacity 0.2s;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    main {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      text-align: center;
       padding: 2rem;
     }
 
@@ -43,47 +77,49 @@
       font-size: 1rem;
       font-weight: bold;
       text-decoration: none;
-      color: var(--button-text);
-      background-color: var(--button-color);
+      color: #333;
+      background-color: #f5f5f5;
       border-radius: 12px;
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .button:hover {
       transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 
     footer {
-      margin-top: 2rem;
       font-size: 0.9rem;
       opacity: 0.8;
-    }
-
-    footer a {
-      color: var(--text-color);
-      text-decoration: underline;
-      margin: 0 0.5rem;
+      padding: 1rem;
     }
   </style>
 </head>
+
 <body>
 
-  <h1>Cykelfesten</h1>
-  <p>Välommen! Kika gärna in appen på app store och google play.</p>
+  <!-- HEADER -->
+  <header>
+    <a href="index.html"><img src="TempLogga.png" alt="Cykelfesten logo"></a>
+    <nav>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Integritetspolicy</a>
+    </nav>
+  </header>
 
-  <a href="https://apps.apple.com/app/your-app-id" class="button">Ladda ner på App Store</a>
+  <!-- MAIN CONTENT -->
+  <main>
+    <h1>Cykelfesten</h1>
+    <p>Välkommen! Kika gärna in appen på App Store och Google Play.</p>
 
-  <a href="https://apps.apple.com/app/your-app-id" class="button">Ladda ner på Google Play</a>
-
-  <div style="margin-top:2rem;">
-    <a href="mailto:support@myapp.com" class="button">Support</a>
-    <a href="privacy.html" class="button">Privacy Policy</a>
-  </div>
+    <a href="https://apps.apple.com/app/your-app-id" class="button">Ladda ner på App Store</a>
+    <a href="#" class="button">Ladda ner på Google Play</a>
+  </main>
 
   <footer>
-    &copy; 2025 Cykelfesten. All rights reserved.
+    &copy; 2025 Cykelfesten. Alla rättigheter förbehållna.
   </footer>
 
 </body>
+
 </html>
